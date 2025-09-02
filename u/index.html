@@ -1,19 +1,39 @@
 <!DOCTYPE HTML>
-<html lang="en-US">
+<!-- (OLD) <html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="refresh" content="0; url=https://spook.bio">
+        <script type="text/javascript">
+            sleep(5)
+            window.location.href = "https://spook.bio"
+        </script>
+        <title>Page Redirection</title>
+    </head>
+    <body>
+        <!-- Note: don't tell people to `click` the link, just tell them that it is a link. --
+        If you are not redirected automatically, follow this <a href='https://spook.bio'>link to spook.bio</a>.
+    </body>
+</html> -->
+
+<html lang="en-US"> <!-- (NEW REDIRECTION SYSTEM) -->
     <head>
         <meta charset="UTF-8">
        <!-- (No LONGER NEEDED) <meta http-equiv="refresh" content="0; url=https://spook.bio/u"> !-->
         <script>
   // Get the path and query string from the current URL
   const path = window.location.pathname + window.location.search;
-  const MainDomain = "https://spook.bio;
-
+  const MainDomain;
+  if (path) {
+    MainDomain = "https://spook.bio/u";
+  } else {
+    MainDomain = "https://spook.bio";
+  }
   // Redirect to the new domain while keeping the original path
   window.location.replace(MainDomain + path);
 </script>
         <title>Page Redirection</title>
     </head>
     <body>
-        If you are not redirected automatically, then try the link again.</a> <!-- follow this <a href='https://spook.bio'>link to spook.bio</a>. !-->
+        If you are not redirected automatically, then try the link again.</a> <!-- follow this <a href='https://spook.bio'>link to spook.bio</a>. -->
     </body>
 </html>
