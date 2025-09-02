@@ -15,15 +15,19 @@
     </body>
 </html> -->
 
-<html lang="en-US"> <!-- (NEW) -->
+<html lang="en-US"> <!-- (NEW REDIRECTION SYSTEM) -->
     <head>
         <meta charset="UTF-8">
        <!-- (No LONGER NEEDED) <meta http-equiv="refresh" content="0; url=https://spook.bio/u"> !-->
         <script>
   // Get the path and query string from the current URL
   const path = window.location.pathname + window.location.search;
-  const MainDomain = "https://spook.bio/u";
-
+  const MainDomain;
+  if (path) {
+    MainDomain = "https://spook.bio/u";
+  } else {
+    MainDomain = "https://spook.bio";
+  }
   // Redirect to the new domain while keeping the original path
   window.location.replace(MainDomain + path);
 </script>
