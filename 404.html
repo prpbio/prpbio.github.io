@@ -23,7 +23,7 @@
   // Get the path and query string from the current URL
   const path = window.location.pathname + window.location.search;
   const MainDomain;
-  if (path) {
+  if (path == null) {
     MainDomain = "https://spook.bio";
     path = "/"
   } else {
