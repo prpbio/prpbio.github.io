@@ -7,9 +7,13 @@
   // Get the path and query string from the current URL
   const path = window.location.pathname + window.location.search;
   const MainDomain = "https://spook.bio";
-
+  const haspage = text.includes("/u")
   // Redirect to the new domain while keeping the original path
-  window.location.replace(MainDomain + "/u/" + path);
+  if haspage {
+  window.location.replace(MainDomain + path);
+  } else {
+  window.location.replace(MainDomain + "/u" + path);
+  }
 </script>
         <title>Page Redirection</title>
     </head>
