@@ -9,7 +9,7 @@
   const MainDomain = "https://spook.bio";
   const haspage = text.includes("/u")
   // Redirect to the new domain while keeping the original path
-  if haspage {
+  if (haspage) {
   window.location.replace(MainDomain + path);
   } else {
   window.location.replace(MainDomain + "/u" + path);
