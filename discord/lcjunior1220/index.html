@@ -1,7 +1,14 @@
-<!DOCTYPE html>
-<html>
-<body>
-<a href='/lecanact'>lcjunior12220's profile</a>
-</body>
-</html>
+<script>
+const express = require('express');
+const app = express();
+const port = 3000;
 
+app.get('/', (req, res) => {
+  res.setHeader('Content-Type', 'text/html');
+  res.send("<a href='/lecanact'>lcjunior12220's profile</a>");
+});
+
+app.listen(port, () => {
+  console.log(`Server listening at http://localhost:${port}`);
+});
+</script>
