@@ -2,27 +2,9 @@
 <html lang="en-US">
     <head>
         <meta charset="UTF-8">
-       <!-- (No LONGER NEEDED) <meta http-equiv="refresh" content="0; url=https://spook.bio"> !-->
+       <!-- (No LONGER NEEDED) <meta http-equiv="refresh" content="0; url=https://prp"> !-->
         <script>
-  // Get the path and query string from the current URL
-  const path = window.location.pathname + window.location.search;
-  const MainDomain = "https://spook.bio";
-  const haspage = path.includes("/u")
-  const hasslash = path.includes("/")
-  // Redirect to the new domain while keeping the original path
-  if (haspage && hasslash) {
-  window.location.replace(MainDomain + path);
-  }
- // if (hasslash) { this was stupid mb- (im tired)
-//  window.location.replace(MainDomain);
- // } 
-  else {
-  window.location.replace(MainDomain + "/u" + path);
-  }
+  const MainDomain = "https://prp.bio";
+  window.location.replace(MainDomain);
 </script>
-        <title>Redirect</title>
-    </head>
-    <body>
-        If you aren't redirected automatically, then please try again. (if this continues to happen please report it to @lcjunior1220 or @sl.ip)</a> <!-- follow this <a href='https://spook.bio'>link to spook.bio</a>. !-->
-    </body>
 </html>
